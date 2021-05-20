@@ -1,0 +1,7 @@
+<form action="{%url 'create'%}" method="post">
+    {%csrf_token%}
+    <p>제목 : <input type="text" name="title"></p>
+    <p>본문 : <textarea name="body" cols="30" rows="10"></textarea></p>
+    <button type="submit">작성하기</button>
+</form>
+<a href="{%url 'index'%}">목차로 돌아가기></a>

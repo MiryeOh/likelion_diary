@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>목차</h1>
+    <div>
+        <a href="{%url 'new'%}"><button>일기 쓰기</button></a>
+    </div>
+    <div class="container">
+        {%for diary in diaries%}
+        <div>
+            <br>
+            제목 : <a href="{%url 'detail' diary.id%}">{{diary.title}}</a>
+        </div>
+        {%endfor%}
+    </div>
+    <br>
+    <div>
+        <a href="{%url 'cover'%}">일기장 커버로 돌아가기</a>
+    </div>
+</body>
+</html>
